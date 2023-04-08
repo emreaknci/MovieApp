@@ -4,7 +4,11 @@ import { ListComponent as MovieListComponent } from './movies/list/list.componen
 import { MainLayoutComponent } from './main-layout.component';
 
 const routes: Routes = [
-  { path: '', component: MainLayoutComponent }
+  {
+    path: '', component: MainLayoutComponent, children: [
+      { path: '', component: MovieListComponent },
+    ]
+  }
 ];
 
 @NgModule({

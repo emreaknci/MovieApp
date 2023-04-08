@@ -1,0 +1,30 @@
+@use "../../../styles.scss" as styles;
+
+.dropdown-menu {
+    display: none;
+}
+
+.nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu>li>a {
+    cursor: pointer;
+}
+
+
+body.dark-mode {
+    .dropdown-menu>li>a {
+        background-color: styles.$dark-bg-color;
+        cursor: pointer;       
+        color:styles.$light-color;
+    }
+    
+    .dropdown-menu>li>a:hover {
+        background-color: rgba($color: styles.$dark-color, $alpha: 0.2);
+        color:styles.$light-color;
+    }
+    .dropdown-menu {
+        background-color: rgba($color: styles.$dark-bg-color, $alpha: 0.1);
+    }
+}

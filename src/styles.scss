@@ -1,1 +1,33 @@
-/* You can add global styles to this file, and also import other style files */
+$dark-bg-color: #222;
+$dark-color: #0f0f0f;
+$light-color: #fff;
+
+.dark-bg-color{
+  background-color: $dark-bg-color !important;
+}
+
+.dark-color {
+  color: $dark-color !important;
+}
+
+.light-color {
+  color: $light-color !important;
+}
+
+body.dark-mode {
+  background-color: $dark-bg-color !important;
+  color: $light-color !important;
+
+  .navbar-brand,
+  .navbar-nav .nav-link {
+    color: $light-color !important;
+  }
+
+  .navbar {
+    background-color: $dark-color !important;
+  }
+
+  #app-logo {
+    color: $light-color !important;
+  }
+}

@@ -1,1 +1,64 @@
-<p>main-layout works!</p>
+<body [ngClass]="{'dark-mode': isDarkMode}">
+    <nav class="navbar navbar-expand-lg " style="background-color: #E6F4F1;">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <i id="app-logo" class="fa-solid fa-film fa-beat-fade fa-2xl"></i>
+                <i> Movies & Series</i>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link " role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Filmler
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item">Popüler</a></li>
+                            <li><a class="dropdown-item">Gösterimdekiler</a></li>
+                            <li><a class="dropdown-item">Yakındakiler</a></li>
+                            <li><a class="dropdown-item">En Fazla Oy Alanlar</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link " role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Diziler
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item">Popüler</a></li>
+                            <li><a class="dropdown-item">Günün Programı</a></li>
+                            <li><a class="dropdown-item">Televizyonda</a></li>
+                            <li><a class="dropdown-item">En Fazla Oy Alanlar</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link " role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Kişiler
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item">Popüler Kişiler</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link"> 
+                            <label class="form-check form-switch" >
+                                <input (click)="toggleDarkLight()" [checked]="isDarkMode" class="form-check-input"
+                                    type="checkbox" role="switch">
+                            </label>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <router-outlet></router-outlet>
+    </div>
+
+</body>
