@@ -14,23 +14,20 @@ export class MovieService extends BaseService {
   constructor(private httpClient: HttpClient) {
     super();
   }
-  getPopular(page:number) {
-    this.params=this.params.append("page",page);
-    this.baseUrl=this.baseUrl+'movie/popular'
-    return this.httpClient.get<ListResultModel<MovieList>>(this.baseUrl,{params:this.params});
+  getDetail(id: number) {
+    this.baseUrl = this.baseUrl + `movie/${id}`;
+    return this.httpClient.get<MovieDetail>(this.baseUrl, { params: this.params });
   }
-  getTopRated(page:number) {
-    this.params=this.params.append("page",page);
-    this.baseUrl=this.baseUrl+'movie/top_rated'
-    return this.httpClient.get<ListResultModel<MovieList>>(this.baseUrl,{params:this.params});
+  getMovies(endpoint: MovieEndpoint, page: number) {
+
+    const url = this.baseUrl + `movie/${endpoint}`;
+    this.params = this.params.append("page", page);
+    return this.httpClient.get<ListResultModel<any>>(url, { params: this.params });
   }
-  getUpcoming(page:number) {
-    this.params=this.params.append("page",page);
-    this.baseUrl=this.baseUrl+'movie/upcoming'
-    return this.httpClient.get<UpcomingMovieListResult>(this.baseUrl,{params:this.params});
-  }
-  getDetail(id:number) {
-    this.baseUrl=this.baseUrl+`movie/${id}`;
-    return this.httpClient.get<MovieDetail>(this.baseUrl,{params:this.params});
-  }
+}
+export enum MovieEndpoint {
+  TOP_RATED = "top_rated",
+  POPULAR = "popular",
+  UPCOMING = "upcoming",
+  NOW_PLAYING = "now_playing",
 }

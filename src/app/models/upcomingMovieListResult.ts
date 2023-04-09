@@ -1,5 +1,5 @@
 import { ListResultModel } from "./listResultModel";
-import { UpcomingMovieDetail } from "./upComingMovieDetail";
+import { UpcomingMovieDetail } from "./upcomingMovieDetail";
 
 export interface UpcomingMovieListResult extends ListResultModel<UpcomingMovieDetail>{
     dates?:{

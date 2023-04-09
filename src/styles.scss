@@ -1,7 +1,7 @@
-$dark-bg-color: #222;
-$dark-color: #0f0f0f;
-$light-color: #fff;
-
+$dark-bg-color: #222E40;
+$dark-color: #111B21;
+$light-color: rgb(255, 255, 255);
+$main-color:#042f52;
 .dark-bg-color{
   background-color: $dark-bg-color !important;
 }
@@ -29,5 +29,10 @@ body.dark-mode {
 
   #app-logo {
     color: $light-color !important;
+  }
+  .card {
+    background: $dark-color !important;
+    border: 0.3rem solid $dark-color !important;
+    box-shadow: 0 0 0.6rem $dark-color !important;
   }
 }

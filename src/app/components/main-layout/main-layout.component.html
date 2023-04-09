@@ -1,5 +1,5 @@
 <body [ngClass]="{'dark-mode': isDarkMode}">
-    <nav class="navbar navbar-expand-lg " style="background-color: #E6F4F1;">
+    <nav class="navbar navbar-expand-lg">
         <div class="container">
             <a class="navbar-brand" href="#">
                 <i id="app-logo" class="fa-solid fa-film fa-beat-fade fa-2xl"></i>
@@ -17,10 +17,10 @@
                             Filmler
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item">Popüler</a></li>
-                            <li><a class="dropdown-item">Gösterimdekiler</a></li>
-                            <li><a class="dropdown-item">Yakındakiler</a></li>
-                            <li><a class="dropdown-item">En Fazla Oy Alanlar</a></li>
+                            <li><a routerLink="movie/popular" class="dropdown-item">Popüler</a></li>
+                            <li><a routerLink="movie/now_playing" class="dropdown-item">Gösterimdekiler</a></li>
+                            <li><a routerLink="movie/upcoming" class="dropdown-item">Yakındakiler</a></li>
+                            <li><a routerLink="movie/top_rated" class="dropdown-item">En Fazla Oy Alanlar</a></li>
                         </ul>
                     </li>
 

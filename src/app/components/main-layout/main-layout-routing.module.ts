@@ -4,9 +4,12 @@ import { ListComponent as MovieListComponent } from './movies/list/list.componen
 import { MainLayoutComponent } from './main-layout.component';
 
 const routes: Routes = [
+  { path: '', redirectTo: 'movie/popular', pathMatch: 'full' },
+  { path: 'home', redirectTo: 'movie/popular', pathMatch: 'full' },
+  { path: 'movie', redirectTo: 'movie/popular', pathMatch: 'full' },
   {
     path: '', component: MainLayoutComponent, children: [
-      { path: '', component: MovieListComponent },
+      { path: 'movie/:param&page:page', component: MovieListComponent },
     ]
   }
 ];

@@ -7,7 +7,7 @@ import { Injectable } from '@angular/core';
 export class BaseService {
 
   constructor() { }
-  baseImageUrl = "http://image.tmdb.org/t/p";
+  baseImageUrl = "http://image.tmdb.org/t/p/original";
   protected baseUrl='https://api.themoviedb.org/3/';
   private apiKey='25ebf0905d1dd5f929f6c4876b97ffe2'
   protected params = new HttpParams()

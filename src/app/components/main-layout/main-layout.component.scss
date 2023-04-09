@@ -8,23 +8,14 @@
     display: block;
 }
 
-.dropdown-menu>li>a {
-    cursor: pointer;
-}
+body {
+    .navbar {
+        background-color: styles.$main-color;
+    }
 
+    .navbar-nav>li>a,
+    .navbar-brand {
+        color: styles.$light-color;
+    }
 
-body.dark-mode {
-    .dropdown-menu>li>a {
-        background-color: styles.$dark-bg-color;
-        cursor: pointer;       
-        color:styles.$light-color;
-    }
-    
-    .dropdown-menu>li>a:hover {
-        background-color: rgba($color: styles.$dark-color, $alpha: 0.2);
-        color:styles.$light-color;
-    }
-    .dropdown-menu {
-        background-color: rgba($color: styles.$dark-bg-color, $alpha: 0.1);
-    }
 }

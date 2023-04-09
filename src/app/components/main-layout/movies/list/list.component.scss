@@ -1,0 +1,123 @@
+@use "../../../../../styles.scss" as styles;
+
+
+
+
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+.card {
+  position: relative;
+  overflow: hidden;
+  width: 20rem;
+  height: 28rem;
+  margin: 3rem auto;
+  background: styles.$main-color;
+  border: 0.3rem solid styles.$main-color;
+  border-radius: 0.2rem;
+  box-shadow: 0 0 0.6rem styles.$main-color;
+}
+
+.card .img1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 60%;
+  width: 100%;
+  background-size: 310px 440px;
+  background-position: left top;
+  transition: all 0.5s ease-in-out;
+}
+
+.card .img2 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 40%;
+  width: 100%;
+  background-size: 310px 440px;
+  background-position: left bottom;
+  transition: all 0.5s ease-in-out;
+}
+
+.card .title {
+  height: 22%;
+  width: 100%;
+  font-size: 20px;
+  text-align: center;
+  font-weight: 700;
+  color: #FFFC;
+  padding: 15px 10px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  box-shadow: 0 -95px 28px -25px #000 inset;
+}
+
+.card .text {
+  position: absolute;
+  bottom: 80px;
+  height: 120px;
+  padding: 15px 10px;
+  text-align: center;
+  font-size: 17px;
+  color: #fff;
+  transform: rotate(90deg);
+  transform-origin: 0 100px;
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+
+.card .catagory {
+  position: absolute;
+  left: 10px;
+  top: 140px;
+  padding: 3px 10px;
+  font-size: 15px;
+  font-weight: 700;
+  text-align: center;
+  background: styles.$light-color;
+  color: styles.$main-color;
+  border-radius: 5px;
+  transform: translate(-160px, 0);
+  transition: all 0.5s ease;
+}
+
+.card .views {
+  position: absolute;
+  left: 10px;
+  top: 175px;
+  padding: 3px 10px;
+  font-size: 15px;
+  font-weight: 700;
+  text-align: center;
+  background: styles.$light-color;
+  color: styles.$main-color;
+  border-radius: 5px;
+  transform: translate(-160px, 0);
+  transition: all 0.5s ease 0.15s;
+}
+
+.card:hover .img1 {
+  transform: rotate(10deg) scale(1.3) translate(20px, 0);
+  transform-origin: 300px 300px;
+  opacity: 0.5;
+}
+
+.card:hover .img2 {
+  transform: rotate(90deg) translate(0px, 150px);
+  transform-origin: -20px 200px;
+}
+
+.card:hover .text {
+  opacity: 0.8;
+  transform: rotate(0deg);
+}
+
+.card:hover .views,
+.card:hover .catagory {
+  transform: translate(0);
+}
