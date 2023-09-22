@@ -1,1 +1,25 @@
-<p>genre list works!</p>
+<mat-accordion >
+    <mat-expansion-panel expanded="true" >
+
+        <mat-expansion-panel-header >
+            <mat-panel-title class="h4 fw-bold" >
+                Türler
+            </mat-panel-title>
+        </mat-expansion-panel-header>
+
+        <mat-divider></mat-divider>
+
+        <mat-list >
+            <div *ngFor="let item of genres" >
+                <mat-list-item routerLinkActive="router-link-active" style="cursor:pointer" >
+                    <span matListItemTitle > {{item.name}}
+                        <span class="badge bg-primary rounded-pill">
+                            1 </span>
+                    </span>
+                </mat-list-item>
+                <mat-divider></mat-divider>
+            </div>
+        </mat-list>
+
+    </mat-expansion-panel>
+</mat-accordion>

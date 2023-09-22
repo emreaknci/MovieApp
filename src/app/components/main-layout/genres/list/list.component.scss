@@ -1,0 +1,6 @@
+@use "../../../../../styles.scss" as styles;
+
+.genrelist * {
+    background-color: styles.$main-color !important;
+    color: white !important;
+}

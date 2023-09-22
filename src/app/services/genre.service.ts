@@ -14,6 +14,6 @@ export class GenreService  extends BaseService {
   }
   getMovieList() {
     this.baseUrl=this.baseUrl+'genre/movie/list'
-    return this.httpClient.get<Genre[]>(this.baseUrl,{params:this.params});
+    return this.httpClient.get<any>(this.baseUrl,{params:this.params});
   }
 }

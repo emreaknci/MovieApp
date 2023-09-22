@@ -18,6 +18,7 @@ body.dark-mode {
   background-color: $dark-bg-color !important;
   color: $light-color !important;
 
+  
   .navbar-brand,
   .navbar-nav .nav-link {
     color: $light-color !important;
@@ -34,5 +35,9 @@ body.dark-mode {
     background: $dark-color !important;
     border: 0.3rem solid $dark-color !important;
     box-shadow: 0 0 0.6rem $dark-color !important;
+  }
+  .genrelist * {
+    background-color: $dark-color !important;
+    color: white !important;
   }
 }
